@@ -5,7 +5,8 @@ export const colors = {
   grey: "#F1F1F1",
   primary: "#00008D",
   secondary: "#F900F1",
-  ternary: "#FB2020"
+  red: "#FB2020",
+  green: "#90EE90"
 };
 
 export const fonts = {

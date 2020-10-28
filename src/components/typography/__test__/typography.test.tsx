@@ -37,10 +37,10 @@ describe("Typography Tests", () => {
       ReactDOM.unmountComponentAtNode(div);
     });
 
-    test("H1TagGreen is green (#0f0)", () => {
+    test("H1TagGreen is green (#90EE90)", () => {
       const tree = renderer.create(<H1TagGreen />).toJSON();
       expect(tree).toMatchSnapshot();
-      expect(tree).toHaveStyleRule("color", "#0f0");
+      expect(tree).toHaveStyleRule("color", "#90EE90");
     });
   });
 
@@ -51,10 +51,10 @@ describe("Typography Tests", () => {
       ReactDOM.unmountComponentAtNode(div);
     });
 
-    test("H1TagRed is red (#f00)", () => {
+    test("H1TagRed is red (#FB2020)", () => {
       const tree = renderer.create(<H1TagRed />).toJSON();
       expect(tree).toMatchSnapshot();
-      expect(tree).toHaveStyleRule("color", "#f00");
+      expect(tree).toHaveStyleRule("color", "#FB2020");
     });
   });
 
@@ -79,7 +79,7 @@ describe("Typography Tests", () => {
       ReactDOM.unmountComponentAtNode(div);
     });
 
-    test("H3Tag is ternary colour (Bright Red, #FB2020)", () => {
+    test("H3Tag is bright colour (Bright Red, #FB2020)", () => {
       const tree = renderer.create(<H3Tag />).toJSON();
       expect(tree).toMatchSnapshot();
       expect(tree).toHaveStyleRule("color", "#FB2020");

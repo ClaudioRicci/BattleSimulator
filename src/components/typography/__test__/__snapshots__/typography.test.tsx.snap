@@ -20,13 +20,10 @@ exports[`Typography Tests H1Tag Tests H1 is primary colour (Navy Blue, #0000BD) 
 />
 `;
 
-exports[`Typography Tests H1Tag Tests H1 is primary colour 1`] = `
+exports[`Typography Tests H1TagGreen Tests H1TagGreen is green (#90EE90) 1`] = `
 .c0 {
-  font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  color: #00008D;
-  text-align: center;
-  border-bottom: 0.2rem #00008D solid;
-  padding-bottom: 0.2rem;
+  font: 900 2em/2rem Verdana,Arial,Helvetica,sans-serif;
+  color: #90EE90;
 }
 
 @media (max-width:768px) {
@@ -40,10 +37,10 @@ exports[`Typography Tests H1Tag Tests H1 is primary colour 1`] = `
 />
 `;
 
-exports[`Typography Tests H1TagGreen Tests H1TagGreen is green (#0F0) 1`] = `
+exports[`Typography Tests H1TagRed Tests H1TagRed is red (#FB2020) 1`] = `
 .c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #0f0;
+  font: 900 2em/2rem Verdana,Arial,Helvetica,sans-serif;
+  color: #FB2020;
 }
 
 @media (max-width:768px) {
@@ -53,137 +50,6 @@ exports[`Typography Tests H1TagGreen Tests H1TagGreen is green (#0F0) 1`] = `
 }
 
 <h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagGreen Tests H1TagGreen is green (#0f0) 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #0f0;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagGreen Tests H1TagGreen is green 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #0f0;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagGreen Tests H1TagGreen is secondary colour 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #0f0;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagRed Tests H1TagRed is red (#F00) 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #f00;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagRed Tests H1TagRed is red (#f00) 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #f00;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagRed Tests H1TagRed is red 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #f00;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H1TagRed Tests H1TagRed is secondary colour 1`] = `
-.c0 {
-  font: 900 3em/1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #f00;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    font: 900 1.4em/1.4rem Verdana,Arial,Helvetica,sans-serif;
-  }
-}
-
-<h1
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H2Tag Tests H1 is secondary colour 1`] = `
-.c0 {
-  font: 900 1.1em/1.1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #F900F1;
-  line-height: 1rem;
-}
-
-<h2
   className="c0"
 />
 `;
@@ -200,19 +66,7 @@ exports[`Typography Tests H2Tag Tests H1Tag is secondary colour (Neon Purple, #F
 />
 `;
 
-exports[`Typography Tests H2Tag Tests H1Tag is secondary colour 1`] = `
-.c0 {
-  font: 900 1.1em/1.1rem Verdana,Arial,Helvetica,sans-serif;
-  color: #F900F1;
-  line-height: 1rem;
-}
-
-<h2
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H3Tag Tests H1 is secondary colour 1`] = `
+exports[`Typography Tests H3Tag Tests H3Tag is bright colour (Bright Red, #FB2020) 1`] = `
 .c0 {
   font: 900 1.8em/1.8rem Verdana,Arial,Helvetica,sans-serif;
   color: #FB2020;
@@ -220,59 +74,11 @@ exports[`Typography Tests H3Tag Tests H1 is secondary colour 1`] = `
 }
 
 <h3
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H3Tag Tests H3Tag is secondary colour 1`] = `
-.c0 {
-  font: 900 1.8em/1.8rem Verdana,Arial,Helvetica,sans-serif;
-  color: #FB2020;
-  line-height: 1rem;
-}
-
-<h3
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H3Tag Tests H3Tag is ternary colour (Bright Red, #FB2020) 1`] = `
-.c0 {
-  font: 900 1.8em/1.8rem Verdana,Arial,Helvetica,sans-serif;
-  color: #FB2020;
-  line-height: 1rem;
-}
-
-<h3
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H4Tag Tests H1 is secondary colour 1`] = `
-.c0 {
-  font: 900 0.8em/0.8rem Verdana,Arial,Helvetica,sans-serif;
-  color: #F900F1;
-  line-height: 1rem;
-}
-
-<h4
   className="c0"
 />
 `;
 
 exports[`Typography Tests H4Tag Tests H4Tag is secondary colour (Neon Purple, #F900F1) 1`] = `
-.c0 {
-  font: 900 0.8em/0.8rem Verdana,Arial,Helvetica,sans-serif;
-  color: #F900F1;
-  line-height: 1rem;
-}
-
-<h4
-  className="c0"
-/>
-`;
-
-exports[`Typography Tests H4Tag Tests H4Tag is secondary colour 1`] = `
 .c0 {
   font: 900 0.8em/0.8rem Verdana,Arial,Helvetica,sans-serif;
   color: #F900F1;
