@@ -1,0 +1,61 @@
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dice {
+  padding: 4px;
+  background: tomato;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+}
+.dot {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: white;
+}
+
+.second-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-face .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.third-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-face .dot:nth-of-type(1) {
+  align-self: flex-end;
+}
+
+.third-face .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.fourth-face,
+.sixth-face,
+.fifth-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourth-face .column,
+.sixth-face .column,
+.fifth-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+  justify-content: center;
+}
