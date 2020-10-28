@@ -36,11 +36,11 @@ Finally, I added some presentational logic to inform either the player or the mo
 
 I would have:
 
-Added more Unit tests, especially to test the actions, reducers and mathematical ooperations
-Created a Mobile version
-Cleaned up the CSS
-Remove superfulous code
-Look to refactor code
+- Added more Unit tests, especially to test the actions, reducers and mathematical ooperations
+- Created a Mobile version
+- Cleaned up the CSS
+- Remove superfulous code
+- Look to refactor code
 
 ## Available Scripts
 
