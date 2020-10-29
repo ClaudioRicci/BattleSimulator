@@ -23,7 +23,7 @@ import { ReactComponent as Monster } from "../../images/monster.svg";
 
 import "./styles/board.scss";
 
-function App() {
+const App: Function = () => {
   const [playerDieOne, setPlayerDieOne] = useState<number>(0);
   const [playerDieTwo, setPlayerDieTwo] = useState<number>(0);
   const [playerRollsTotal, setPlayerRollsTotal] = useState<number>(0);
@@ -33,12 +33,12 @@ function App() {
   const [monsterRollsTotal, setMonsterRollsTotal] = useState<number>(0);
   const [monsterLifeTotal, setMonsterLifeTotal] = useState<number>(100);
 
-  function newGame() {
+  const newGame: Function = () => {
     setPlayerLifeTotal(100);
     setMonsterLifeTotal(100);
-  }
+  };
 
-  function rollDice(min: number, max: number) {
+  const rollDice: Function = (min: number, max: number) => {
     const rollNumbers: number[] = [];
     let i: number = 0;
     while (i < 4) {
@@ -69,7 +69,7 @@ function App() {
 
     playerRollsGreater && setMonsterLifeTotal(monsterOverallLife);
     monsterRollsGreater && setPlayerLifeTotal(playerOverallLife);
-  }
+  };
 
   const playerWinMargin: number = playerRollsTotal - monsterRollsTotal;
   const monsterWinMargin: number = monsterRollsTotal - playerRollsTotal;
@@ -168,6 +168,6 @@ function App() {
       </div>
     </BoardSurround>
   );
-}
+};
 
 export default App;

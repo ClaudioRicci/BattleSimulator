@@ -9,11 +9,11 @@ interface LifeBarProps {
   life: number;
 }
 
-const Range = (props: RangeProps) => {
+const Range: Function = (props: RangeProps) => {
   return <div className="range" style={{ width: `${props.percentRange}%` }} />;
 };
 
-const ProgressBar = (props: RangeProps) => {
+const ProgressBar: Function = (props: RangeProps) => {
   return (
     <div className="progress-bar">
       <Range percentRange={props.percentRange} />
@@ -21,7 +21,7 @@ const ProgressBar = (props: RangeProps) => {
   );
 };
 
-export const LifeBar = (props: LifeBarProps) => {
+export const LifeBar: Function = (props: LifeBarProps) => {
   return (
     <div className="progress-bar-surround">
       <ProgressBar percentRange={props.life} />

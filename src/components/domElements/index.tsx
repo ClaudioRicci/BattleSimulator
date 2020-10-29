@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, fonts, align, deviceSizes } from "../../themeVariables";
 
-export const PlayerSurround = styled.div`
+export const PlayerSurround: Function = styled.div`
   width: 20rem;
   padding: 1.6rem 1.6rem 0.5rem;
   border: 0.25rem ${colors.primary} solid;
@@ -9,7 +9,7 @@ export const PlayerSurround = styled.div`
   border-radius: 1rem;
 `;
 
-export const BoardSurround = styled.div`
+export const BoardSurround: Function = styled.div`
   text-align: ${align.center};
   width: 60rem;
   height: 46rem;
@@ -23,7 +23,7 @@ export const BoardSurround = styled.div`
   }
 `;
 
-export const ActionButton = styled.button`
+export const ActionButton: Function = styled.button`
   background: ${colors.white};
   border: 0.2rem ${colors.primary} solid;
   color: ${colors.primary};

@@ -1,11 +1,10 @@
 .first-face {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 .dice {
-  padding: 4px;
-  background: tomato;
+  padding: 0.5rem;
+  background: #ff6347;
   width: 5rem;
   height: 5rem;
   border-radius: 10%;
@@ -16,36 +15,16 @@
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background: white;
+  background: #fff;
 }
 
-.second-face {
-  display: flex;
-  justify-content: space-between;
-}
-
-.second-face .dot:nth-of-type(2) {
-  align-self: flex-end;
-}
-
-.third-face {
-  display: flex;
-  justify-content: space-between;
-}
-
+.second-face .dot:nth-of-type(2),
 .third-face .dot:nth-of-type(1) {
   align-self: flex-end;
 }
 
 .third-face .dot:nth-of-type(2) {
   align-self: center;
-}
-
-.fourth-face,
-.sixth-face,
-.fifth-face {
-  display: flex;
-  justify-content: space-between;
 }
 
 .fourth-face .column,
@@ -58,4 +37,20 @@
 
 .fifth-face .column:nth-of-type(2) {
   justify-content: center;
+}
+
+.first-face,
+.second-face,
+.third-face,
+.fourth-face,
+.fifth-face,
+.sixth-face {
+  display: flex;
+}
+.second-face,
+.third-face,
+.fourth-face,
+.fifth-face,
+.sixth-face {
+  justify-content: space-between;
 }

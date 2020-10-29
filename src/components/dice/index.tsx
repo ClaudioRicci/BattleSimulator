@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/dice.css";
 
-export const DiceOne = () => {
+export const DiceOne: Function = () => {
   return (
     <div className="dice first-face">
       <span className="dot"></span>
@@ -9,7 +9,7 @@ export const DiceOne = () => {
   );
 };
 
-export const DiceTwo = () => {
+export const DiceTwo: Function = () => {
   return (
     <div className="dice second-face">
       <span className="dot"></span>
@@ -18,7 +18,7 @@ export const DiceTwo = () => {
   );
 };
 
-export const DiceThree = () => {
+export const DiceThree: Function = () => {
   return (
     <div className="dice third-face">
       <span className="dot"></span>
@@ -28,7 +28,7 @@ export const DiceThree = () => {
   );
 };
 
-export const DiceFour = () => {
+export const DiceFour: Function = () => {
   return (
     <div className="fourth-face dice">
       <div className="column">
@@ -43,7 +43,7 @@ export const DiceFour = () => {
   );
 };
 
-export const DiceFive = () => {
+export const DiceFive: Function = () => {
   return (
     <div className="fifth-face dice">
       <div className="column">
@@ -63,7 +63,7 @@ export const DiceFive = () => {
   );
 };
 
-export const DiceSix = () => {
+export const DiceSix: Function = () => {
   return (
     <div className="sixth-face dice">
       <div className="column">

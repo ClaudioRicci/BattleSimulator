@@ -1,2 +1,2 @@
-export const scoreReducer = (accumulator: number, currentValue: number) =>
+export const scoreReducer: any = (accumulator: number, currentValue: number) =>
   accumulator + currentValue;
