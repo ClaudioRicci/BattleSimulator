@@ -40,23 +40,24 @@ function App() {
 
   function rollDice(min: number, max: number) {
     const rollNumbers: number[] = [];
-    let i = 0;
+    let i: number = 0;
     while (i < 4) {
-      let rollNumber: any = Math.floor(Math.random() * max + min);
+      let rollNumber: number = Math.floor(Math.random() * max + min);
       rollNumbers.push(rollNumber);
       i++;
     }
 
     const playerRolls: number[] = rollNumbers.slice(0, 2);
     const monsterRolls: number[] = rollNumbers.slice(2, 4);
-    const playerRollOverallTotal = playerRolls.reduce(scoreReducer);
-    const monsterRollOverallTotal = monsterRolls.reduce(scoreReducer);
-    const playerRollsGreater = playerRollOverallTotal > monsterRollOverallTotal;
-    const monsterRollsGreater =
+    const playerRollOverallTotal: number = playerRolls.reduce(scoreReducer);
+    const monsterRollOverallTotal: number = monsterRolls.reduce(scoreReducer);
+    const playerRollsGreater: boolean =
+      playerRollOverallTotal > monsterRollOverallTotal;
+    const monsterRollsGreater: boolean =
       monsterRollOverallTotal > playerRollOverallTotal;
-    const monsterOverallLife =
+    const monsterOverallLife: number =
       monsterLifeTotal - (playerRollOverallTotal - monsterRollOverallTotal);
-    const playerOverallLife =
+    const playerOverallLife: number =
       playerLifeTotal - (monsterRollOverallTotal - playerRollOverallTotal);
 
     setPlayerDieOne(playerRolls[0]);
@@ -70,6 +71,12 @@ function App() {
     monsterRollsGreater && setPlayerLifeTotal(playerOverallLife);
   }
 
+  const playerWinMargin: number = playerRollsTotal - monsterRollsTotal;
+  const monsterWinMargin: number = monsterRollsTotal - playerRollsTotal;
+  const playerRollsHigher: boolean = playerRollsTotal > monsterRollsTotal;
+  const monsterRollsHigher: boolean = monsterRollsTotal > playerRollsTotal;
+  const combatantsRollsEqual: boolean = playerRollsTotal === monsterRollsTotal;
+
   return (
     <BoardSurround>
       <H1Tag>BATTLE SIMULATOR</H1Tag>
@@ -78,16 +85,16 @@ function App() {
           <div className={"playerCard"}>
             <Hero className={"playerIcon"} />
             <H3Tag>PLAYER</H3Tag>
-            <H4Tag>LIFEPOINTS: {playerLifeTotal}</H4Tag>
-            {monsterRollsTotal > playerRollsTotal && (
+            <H4Tag>
+              LIFEPOINTS: {playerLifeTotal > 0 ? playerLifeTotal : 0}
+            </H4Tag>
+            {monsterRollsHigher && (
               <H4Tag>
-                OUCH! YOU LOST {monsterRollsTotal - playerRollsTotal} HEALTH
-                POINT
-                {monsterRollsTotal - playerRollsTotal === 1 ? "" : "S"}
+                OUCH! YOU LOST {monsterWinMargin} HEALTH POINT
+                {monsterWinMargin === 1 ? "" : "S"}
               </H4Tag>
             )}
           </div>
-
           <LifeBar life={playerLifeTotal} />
         </PlayerSurround>
         <div className={"buttonAndMessageSurround"}>
@@ -107,20 +114,18 @@ function App() {
           </div>
           <div className={"centralSurround"}>
             <H2Tag>
-              {playerRollsTotal === monsterRollsTotal
+              {combatantsRollsEqual
                 ? "YOU BOTH ROLLED THE SAME SCORE, NO ONE LOSES ENERGY"
-                : playerRollsTotal > monsterRollsTotal
-                ? `MONSTER LOST ${playerRollsTotal - monsterRollsTotal} POINT${
-                    playerRollsTotal - monsterRollsTotal === 1 ? "" : "S"
+                : playerRollsHigher
+                ? `MONSTER LOST ${playerWinMargin} POINT${
+                    playerWinMargin === 1 ? "" : "S"
                   } OF DAMAGE!`
-                : `YOU LOST ${monsterRollsTotal - playerRollsTotal} POINT${
-                    monsterRollsTotal - playerRollsTotal === 1 ? "" : "S"
+                : `YOU LOST ${monsterWinMargin} POINT${
+                    monsterWinMargin === 1 ? "" : "S"
                   }  OF DAMAGE!`}
             </H2Tag>
-
             {monsterLifeTotal <= 0 && <H1TagGreen>You Win</H1TagGreen>}
             {playerLifeTotal <= 0 && <H1TagRed>Game Over</H1TagRed>}
-
             {monsterLifeTotal > 0 && playerLifeTotal > 0 ? (
               <ActionButton onClick={() => rollDice(1, 6)}>
                 ATTACK!
@@ -148,12 +153,13 @@ function App() {
           <div className={"playerCard"}>
             <Monster className={"playerIcon"} />
             <H3Tag>MONSTER</H3Tag>
-            <H4Tag>LIFEPOINTS: {monsterLifeTotal}</H4Tag>
-            {playerRollsTotal > monsterRollsTotal && (
+            <H4Tag>
+              LIFEPOINTS: {monsterLifeTotal > 0 ? monsterLifeTotal : 0}
+            </H4Tag>
+            {playerRollsHigher && (
               <H4Tag>
-                OWW! MONSTER LOST {playerRollsTotal - monsterRollsTotal} HEALTH
-                POINT
-                {playerRollsTotal - monsterRollsTotal === 1 ? "" : "S"}
+                OWW! MONSTER LOST {playerWinMargin} HEALTH POINT
+                {playerWinMargin === 1 ? "" : "S"}
               </H4Tag>
             )}
           </div>
